@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtividadeLista", "AtividadeLista\AtividadeLista\AtividadeLista.csproj", "{4E64D9A2-D1D9-4D58-A7F1-D618E56B1414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtividadeLista.WinUI", "AtividadeLista\AtividadeLista.WinUI\AtividadeLista.WinUI.csproj", "{80ACEBF3-15BE-40AF-863B-5599052399FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E64D9A2-D1D9-4D58-A7F1-D618E56B1414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E64D9A2-D1D9-4D58-A7F1-D618E56B1414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E64D9A2-D1D9-4D58-A7F1-D618E56B1414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E64D9A2-D1D9-4D58-A7F1-D618E56B1414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80ACEBF3-15BE-40AF-863B-5599052399FF}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{80ACEBF3-15BE-40AF-863B-5599052399FF}.Debug|Any CPU.Build.0 = Debug|x64
+		{80ACEBF3-15BE-40AF-863B-5599052399FF}.Release|Any CPU.ActiveCfg = Release|x64
+		{80ACEBF3-15BE-40AF-863B-5599052399FF}.Release|Any CPU.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
