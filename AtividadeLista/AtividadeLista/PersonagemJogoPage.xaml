@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AtividadeLista.PersonagemJogoPage"
+             BindingContext="{x:Reference PersonagemJogo}"
+             Title="PersonagemJogoPage">
+             
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label 
+                 Text="Nome"
+                 VerticalOptions="Start" 
+                 HorizontalOptions="Start" />
+            <Label 
+                 Text="{Binding Nome}"
+                 VerticalOptions="Start" 
+                 FontSize="Large"
+                 HorizontalOptions="End" />
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+            <Label
+                Text="História"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Label
+                Text="{Binding Historia}"
+                VerticalOptions="Start"
+                FontSize="Large"
+                HorizontalOptions="End" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label
+                Text="Poder"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Label
+                Text="{Binding Poder}"
+                VerticalOptions="Start"
+                FontSize="Large"
+                HorizontalOptions="End" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label
+                Text="Características"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Label
+                Text="{Binding Caracteristica}"
+                VerticalOptions="Start"
+                FontSize="Large"
+                HorizontalOptions="End" />
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+            <Label
+                Text="Origem"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Label
+                Text="{Binding Origem}"
+                VerticalOptions="Start"
+                FontSize="Large"
+                HorizontalOptions="End" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
