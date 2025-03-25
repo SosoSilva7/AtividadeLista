@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local ="clr-namespace:AtividadeLista"
+             xmlns:local="clr-namespace:AtividadeLista"
+             Shell.NavBarIsVisible="false"
+             BackgroundColor="#1B1325"
              x:Class="AtividadeLista.ListaPersonagemJogoPage"
-             Title="ListaPersonagemJogoPage">
-    <VerticalStackLayout>
-        <ListView x:Name="lstPersonagemJogo">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:PersonagemJogo">
-                    <ViewCell Tapped="ViewCell_Tapped">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                                
-                             <Label Text="{Binding Nome}" Grid.Row="4"/>
-                             <Label Text="{Binding Historia}" Grid.Row="3"/>
-                             <Label Text="{Binding Poder}" Grid.Row="2"/>
-                             <Label Text="{Binding Caracteristicas}" Grid.Row="1"/>
-                             <Label Text="{Binding Origem}" Grid.Row="0"/>
-                        </Grid>
-                    </ViewCell>
-                    
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-        
-    </VerticalStackLayout>
+             Title="Lista de Personagens">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="Confira alguns personagens que fazem parte da história completa da THE LORE" 
+               HorizontalOptions="Center"
+               FontSize="22" 
+               FontAttributes="Bold" 
+               TextColor="#F4E1B5"
+               Padding="10"/>
+
+            <Label Text="*OBS: Alguns personagens podem não estar no roteiro do jogo*" 
+               HorizontalOptions="Center"
+               FontSize="14" 
+               FontAttributes="Italic" 
+               TextColor="#9ff1ca"
+               />
+
+            <ListView x:Name="lstPersonagemJogo" 
+                  BackgroundColor="#1B1325"
+                  SeparatorVisibility="Default"
+                  SeparatorColor="#F4E1B5"
+                  HasUnevenRows="True"
+                  Margin="0"
+                  >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:PersonagemJogo">
+                        <ViewCell Tapped="ViewCell_Tapped">
+                            <Frame CornerRadius="15"
+                               Padding="15"
+                               Margin="10"
+                               BackgroundColor="#342A46">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding Nome}"
+                                       FontAttributes="Bold"
+                                       TextColor="#F4E1B5"
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       Padding="5"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

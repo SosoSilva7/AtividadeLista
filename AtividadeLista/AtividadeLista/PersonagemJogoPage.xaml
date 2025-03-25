@@ -2,68 +2,50 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AtividadeLista.PersonagemJogoPage"
+             Shell.NavBarIsVisible="false"
+             BackgroundColor="#1B1325"
              BindingContext="{x:Reference PersonagemJogo}"
-             Title="PersonagemJogoPage">
-             
-    <VerticalStackLayout>
-        <HorizontalStackLayout>
-            <Label 
-                 Text="Nome"
-                 VerticalOptions="Start" 
-                 HorizontalOptions="Start" />
-            <Label 
-                 Text="{Binding Nome}"
-                 VerticalOptions="Start" 
-                 FontSize="Large"
-                 HorizontalOptions="End" />
-        </HorizontalStackLayout>
-        
-        <HorizontalStackLayout>
-            <Label
-                Text="História"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"/>
-            <Label
-                Text="{Binding Historia}"
-                VerticalOptions="Start"
-                FontSize="Large"
-                HorizontalOptions="End" />
-        </HorizontalStackLayout>
+             Title="Detalhes do Personagem">
 
-        <HorizontalStackLayout>
-            <Label
-                Text="Poder"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"/>
-            <Label
-                Text="{Binding Poder}"
-                VerticalOptions="Start"
-                FontSize="Large"
-                HorizontalOptions="End" />
-        </HorizontalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
 
-        <HorizontalStackLayout>
-            <Label
-                Text="Características"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"/>
-            <Label
-                Text="{Binding Caracteristica}"
-                VerticalOptions="Start"
-                FontSize="Large"
-                HorizontalOptions="End" />
-        </HorizontalStackLayout>
-        
-        <HorizontalStackLayout>
-            <Label
-                Text="Origem"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"/>
-            <Label
-                Text="{Binding Origem}"
-                VerticalOptions="Start"
-                FontSize="Large"
-                HorizontalOptions="End" />
-        </HorizontalStackLayout>
-    </VerticalStackLayout>
+            <Label Text="{Binding Nome}" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   TextColor="#F4E1B5"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Frame BackgroundColor="#342A46"
+                   Padding="15"
+                   CornerRadius="15">
+                <VerticalStackLayout Spacing="10">
+
+                    <Grid ColumnDefinitions="Auto, *">
+                        <Label Text="História:" FontAttributes="Bold" FontSize="Medium" TextColor="#9ff1ca" />
+                        <Label Text="{Binding Historia}" FontSize="Medium" TextColor="White" Grid.Column="1"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="Auto, *">
+                        <Label Text="Poder:" FontAttributes="Bold" FontSize="Medium" TextColor="#9ff1ca" />
+                        <Label Text="{Binding Poder}" FontSize="Medium" TextColor="White" Grid.Column="1"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="Auto, *">
+                        <Label Text="Características:" FontAttributes="Bold" FontSize="Medium" TextColor="#9ff1ca" />
+                        <Label Text="{Binding Caracteristicas}" FontSize="Medium" TextColor="White" Grid.Column="1"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="Auto, *">
+                        <Label Text="Origem:" FontAttributes="Bold" FontSize="Medium" TextColor="#9ff1ca" />
+                        <Label Text="{Binding Origem}" FontSize="Medium" TextColor="White" Grid.Column="1"/>
+                    </Grid>
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
